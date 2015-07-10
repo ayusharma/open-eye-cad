@@ -1,0 +1,27 @@
+<div class="row" >
+	<div class="col-md-12" style="margin-top:74px;">
+		<div class="col-md-6" style="height:500px;">
+			<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <h3 class="panel-title"><b>Sphere</b></h3>
+				  </div>
+				  <div class="panel-body" ng-model="description">
+				    {{ description }}
+				  </div>
+			</div>
+			<div class="input-group">
+				<!-- <span class="input-group-addon" id="basic-addon1">Enter Radius</span> -->
+				<p>Enter Radius</p>
+				<input type="text" class="form-control" placeholder="Default Radius: 5px;" aria-describedby="basic-addon1" ng-model="rad"  ng-change="selectedItemChange();">
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div oncontextmenu="return false;" id="viewerContext" style="height:500px; border:1px solid #ccc !important; border-radius:10px; overflow:hidden;"></div> 
+			<br>
+			<div id="tail">
+			<div id="statusdiv"></div>
+			</div>
+			<!-- <button class="btn btn-primary" style="padding:10px;">Generate STL</button> -->
+		</div>
+	</div>
+</div>
