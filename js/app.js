@@ -135,7 +135,7 @@ angular.module('oec',['ui.router'])
 
 	$scope.rad = 5
 
-	$scope.description = "This is just a basic tutorial to give you an idea of how things work in here. There is a spehere besides here and if the value of the radius is changed, simultaneously the code generating this model changes and you can see the rendered images of the new model. Once you select the desirable model you can go and generate the STL file and 3D print the model. ";
+	$scope.description = "This is just a basic tutorial to give you an idea of how things work in here. There is a sphere besides here and if the value of the radius is changed, simultaneously the code generating this model changes and you can see the rendered images of the new model. Once you select the desirable model you can go and generate the STL file and 3D print the model. ";
 
 	$scope.selectedItemChange = function(){
 
