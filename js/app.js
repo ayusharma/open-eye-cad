@@ -5,37 +5,37 @@ var data = [
 			"name":"Sphere",
 			"img":"imgs/sphere.gif",
 			"description":"Sphere Respository for cad files",
-			"url":"/#/sphere"
+			"url":"#/sphere"
 		},
 		{
 			"name":"Slit lamp adaptar for iphone",
 			"img":"imgs/iphone_slit.jpg",
 			"description":"Interactive Respository for iphone files",
-			"url":"/#/iphone"
+			"url":"#/iphone"
 		},
 		{
 			"name":"Eye Piece HS BM 900",
 			"img":"imgs/eyepiecehs.jpg",
 			"description":"STL Respository for Eye piece",
-			"url":"/#/eyepiecehs"
+			"url":"#/eyepiecehs"
 		},
 		{
 			"name":"Eye Piece CZ",
 			"img":"imgs/eyepiececz.jpg",
 			"description":"STL Respository for Eye piece",
-			"url":"/#/eyepiececz"
+			"url":"#/eyepiececz"
 		},
 		{
 			"name":"Eye Occluder",
 			"img":"imgs/eyeoccluder.jpg",
 			"description":"STL Respository for Eye occluder",
-			"url":"/#/occluder"
+			"url":"#/occluder"
 		},
 		{
 			"name":"Near Fixation Device",
 			"img":"imgs/nearfix.jpg",
 			"description":"STL Respository for Near Fixation Device",
-			"url":"/#/nearfix"
+			"url":"#/nearfix"
 		}
 
 	];
@@ -58,38 +58,38 @@ angular.module('oec',['ui.router'])
 	})
 
 	.state('respository', {
-		url:'repo',
+		url:'/repo',
 		templateUrl: 'templates/views/dashboard.html',
 		controller:'MainCtrl'
 	})
 
 	.state('sphere', {
-		url:'sphere',
+		url:'/sphere',
 		templateUrl: 'templates/views/sphere.html',
 		controller:'SphereCtrl'
 	})
 	.state('iphone', {
-		url:'iphone',
+		url:'/iphone',
 		templateUrl: 'templates/views/iphone.html',
 		controller:'IphoneCtrl'
 	})
 	.state('eyepiecehs', {
-		url:'eyepiecehs',
+		url:'/eyepiecehs',
 		templateUrl: 'templates/views/eyepiecehs.html',
 		controller:'EyePieceHs'
 	})
 	.state('eyepiececz', {
-		url:'eyepiececz',
+		url:'/eyepiececz',
 		templateUrl: 'templates/views/eyepiececz.html',
 		controller:'EyePieceCz'
 	})
 	.state('eyeoccluder', {
-		url:'occluder',
+		url:'/occluder',
 		templateUrl: 'templates/views/occluder.html',
 		controller:'Occluder'
 	})
 	.state('nearfix', {
-		url:'nearfix',
+		url:'/nearfix',
 		templateUrl: 'templates/views/nearfix.html',
 		controller:'NearFix'
 	})
@@ -99,6 +99,9 @@ angular.module('oec',['ui.router'])
 
 
 //controllers
+.controller('LandingCtrl',function($scope){
+
+})
 .controller('MainCtrl',function($scope){
 
 
