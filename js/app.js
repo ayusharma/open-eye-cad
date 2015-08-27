@@ -53,44 +53,44 @@ angular.module('oec',['ui.router'])
 	
 	.state('landing', {
 		url:'/',
-		templateUrl: '/templates/views/landing.html',
+		templateUrl: 'templates/views/landing.html',
 		controller:'LandingCtrl'
 	})
 
 	.state('respository', {
-		url:'/repo',
-		templateUrl: '/templates/views/dashboard.html',
+		url:'repo',
+		templateUrl: 'templates/views/dashboard.html',
 		controller:'MainCtrl'
 	})
 
 	.state('sphere', {
-		url:'/sphere',
-		templateUrl: '/templates/views/sphere.html',
+		url:'sphere',
+		templateUrl: 'templates/views/sphere.html',
 		controller:'SphereCtrl'
 	})
 	.state('iphone', {
-		url:'/iphone',
-		templateUrl: '/templates/views/iphone.html',
+		url:'iphone',
+		templateUrl: 'templates/views/iphone.html',
 		controller:'IphoneCtrl'
 	})
 	.state('eyepiecehs', {
-		url:'/eyepiecehs',
-		templateUrl: '/templates/views/eyepiecehs.html',
+		url:'eyepiecehs',
+		templateUrl: 'templates/views/eyepiecehs.html',
 		controller:'EyePieceHs'
 	})
 	.state('eyepiececz', {
-		url:'/eyepiececz',
-		templateUrl: '/templates/views/eyepiececz.html',
+		url:'eyepiececz',
+		templateUrl: 'templates/views/eyepiececz.html',
 		controller:'EyePieceCz'
 	})
 	.state('eyeoccluder', {
-		url:'/occluder',
-		templateUrl: '/templates/views/occluder.html',
+		url:'occluder',
+		templateUrl: 'templates/views/occluder.html',
 		controller:'Occluder'
 	})
 	.state('nearfix', {
-		url:'/nearfix',
-		templateUrl: '/templates/views/nearfix.html',
+		url:'nearfix',
+		templateUrl: 'templates/views/nearfix.html',
 		controller:'NearFix'
 	})
 
