@@ -3,6 +3,3 @@ Open Eye Cad is an opensource repository which gives the power of customization 
 
 ## MIT RedX
 This application has been developed in MIT Rex Camp, Hyderabad.
-
-## For more information, Please visit:
-`http://ayusharma.in/#/projects/openeyecad`
