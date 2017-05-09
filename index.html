@@ -14,18 +14,13 @@
 </head>
 <body data-ng-app="oec" onload="onload();">
 
-
 <header></header>
-<div ui-view class="container-fluid"></div>  
+<div ui-view class="container-fluid"></div>
 
 
 <div id="errordiv" style="display:none !important;"></div>
 <div id="editor"></div>
-<!-- <div oncontextmenu="return false;" id="viewerContext"></div>  -->
 <div id="parametersdiv" style="display:none !important;"></div>
-<!-- <div id="tail">
-<div id="statusdiv"></div>
-</div> -->
 
 </body>
 
@@ -35,7 +30,6 @@
 <script type="text/javascript" src="js/jquery/jquery-ui.js"></script>
 <script type="text/javascript" src="js/jquery/jquery.hammer.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!-- <script type="text/javascript" src="js/angular-route.min.js"></script> -->
 <script type="text/javascript" src="lightgl.js"></script>
 <script type="text/javascript" src="csg.js"></script>
 <script type="text/javascript" src="formats.js"></script>
@@ -51,132 +45,4 @@
 <script type="text/javascript" src="js/jsc3d.webgl.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 
-<!--<script src="ace/ace.js" charset="utf-8"></script>-->
-
-<script type="text/javascript">
-
-// var me = document.location.toString().match(/^file:/)?'web-offline':'web-online'; // me: {cli, web-offline, web-online}
-// var showEditor = false;
-// var gCurrentFile = null;
-// var gProcessor = null;
-// var gEditor = null;
-
-// var gCurrentFiles = [];       // linear array, contains files (to read)
-// var gMemFs = [];              // associated array, contains file content in source gMemFs[i].{name,source}
-// var gMemFsCount = 0;          // async reading: count of already read files
-// var gMemFsTotal = 0;          // async reading: total files to read (Count==Total => all files read)
-// var gMemFsChanged = 0;        // how many files have changed
-// var gRootFs = [];             // root(s) of folders 
-
-// var _includePath = './';
-
-// function onload() {
-
-//   console.log("one");
-//    gProcessor = new OpenJsCad.Processor(document.getElementById("viewerContext"));
-
-//    if(me=='web-online') {    // we are online, fetch first example
-    
-//       fetchExample('cad/cz.scad');
-//    } 
-//    else {
-//       gProcessor.setJsCad(gEditor.getValue());
-//    }
-// }
-
-// function fetchExample(fn,url) {
-//   console.log("two");
-//    gMemFs = []; gCurrentFiles = [];
-   
-//    if(1) {     // doesn't work off-line yet
-//       var xhr = new XMLHttpRequest();
-//       xhr.open("GET", fn, true);
-     
-//       status("Loading "+fn+" <img id=busy src='imgs/busy.gif'>");
-//       xhr.onload = function() {
-//          var source = this.responseText;
-//          var editorSource = source;
-//          var asyncComputation = false;
-//          var path = fn;
-
-//          _includePath = path.replace(/\/[^\/]+$/,'/');
-         
-//          if(fn.match(/\.jscad$/i)||fn.match(/\.js$/i)) {
-//             status("Processing "+fn+" <img id=busy src='imgs/busy.gif'>");
-//             putSourceInEditor(editorSource,fn);
-//             gProcessor.setJsCad(source,fn);
-            
-//          } else if(fn.match(/\.scad$/i)) {
-//             status("Converting "+fn+" <img id=busy src='imgs/busy.gif'>");
-//             editorSource = source;
-//             if(!editorSource.match(/^\/\/!OpenSCAD/i)) {
-//                editorSource = "//!OpenSCAD\n"+editorSource;
-//             }
-//             source = openscadOpenJscadParser.parse(editorSource);
-          
-//             putSourceInEditor(editorSource,fn);
-//             gProcessor.setJsCad(source,fn);
-            
-//          } else if(fn.match(/\.(stl|obj|amf|gcode)$/i)) {
-//             status("Converting "+fn+" <img id=busy src='imgs/busy.gif'>");
-//             if(!fn.match(/\.amf/)) {
-               
-//                var blobURL = new Blob([document.querySelector('#conversionWorker').textContent]);
-               
-//                var worker = new Worker(window.webkitURL!==undefined?window.webkitURL.createObjectURL(blobURL):window.URL.createObjectURL(blobURL));
-//                //var worker = new Worker(window.URL.createObjectURL(blobURL));
-//                worker.onmessage = function(e) {    // worker finished
-//                   var data = e.data;
-//                   //echo("worker end:",data.source,data.filename);
-//                   if(e.url) data.source = "// Remote retrieve <"+e.url+">\n"+data.source;
-//                   putSourceInEditor(data.source,data.filename);
-//                   gProcessor.setJsCad(data.source,data.filename);
-//                };
-//                var u = document.location.href;
-//                u = u.replace(/#.*$/,'');
-//                u = u.replace(/\?.*$/,'');
-//                worker.postMessage({me: me, version: version, url: u, remote: url, source: source, filename: fn }); // start worker
-//                asyncComputation = true;
-
-//             } else {       // async (disabled)
-//                status("Converting "+fn+" <img id=busy src='imgs/busy.gif'>");
-//                fn.match(/\.(stl|obj|amf|gcode)$/i);
-//                var type = RegExp.$1;
-//                if(type=='obj') {
-//                   editorSource = source = parseOBJ(source,fn);   
-//                } else if(type=='amf') {
-//                   editorSource = source = parseAMF(source,fn);   
-//                } else if(type=='gcode') {
-//                   editorSource = source = parseGCode(source,fn);   
-//                } else {
-//                   editorSource = source = parseSTL(source,fn);   
-//                }
-//                putSourceInEditor(source,fn);
-//             }
-//             if(!asyncComputation) {
-//                gProcessor.setJsCad(source,fn);
-//             }
-//          }
-//       }
-//       xhr.send();
-//    }
-// }
-
-// function putSourceInEditor(src,fn) {
-
-//   console.log("three");
-  
-//    previousFilename = fn;
-//    previousScript = src;
-//    gPreviousModificationTime = "";
-//     // console.log(src);
-// }
-
-
-// OpenJsCad.AlertUserOfUncaughtExceptions();
-
-
-
-</script>
-
-</html> 
+</html>
